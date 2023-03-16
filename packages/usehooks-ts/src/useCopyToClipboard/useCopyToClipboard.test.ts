@@ -1,4 +1,4 @@
-import { act, renderHook } from '@testing-library/react-hooks/dom'
+import { act, renderHook } from '@testing-library/react'
 
 import { useCopyToClipboard } from './useCopyToClipboard'
 
@@ -16,8 +16,6 @@ describe('useClipboard()', () => {
 
   afterEach(() => {
     jest.resetAllMocks()
-    // @ts-ignore mock clipboard
-    global.navigator.clipboard = originalClipboard
   })
 
   test('should use clipboard', () => {
